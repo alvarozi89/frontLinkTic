@@ -128,7 +128,7 @@ export default function RegistrarPersona() {
         })
        
         //metodo para limpiar formulario
-        //e.target.reset();
+         e.target.reset();
          setNombres("");
          setApellidos("");
         
