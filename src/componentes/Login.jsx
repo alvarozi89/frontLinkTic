@@ -168,7 +168,7 @@ export default function SignInSide() {
                 </Grid>
                 <Grid item>
                   <Link href="/registrarCiudad" variant="body2">
-                    {"Si no tienes un usuario por favor registrate aqui"}
+                    {""}
                   </Link>
                 </Grid>
               </Grid>
