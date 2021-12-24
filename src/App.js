@@ -2,12 +2,11 @@ import './App.css';
 import {BrowserRouter as Router,Route,Redirect} from 'react-router-dom'
 import Barra from './componentes/Barra';
 import Login from './componentes/Login'
-import RegistrarPersona from './componentes/RegistrarPersona';
-import TablaPersona from './componentes/TablaPersona';
-import RegistrarCiudad from './componentes/RegistrarCiudad'
+import RegistrarProducto from './componentes/RegistrarProducto';
+import TablaProducto from './componentes/TablaProducto';
+import RegistrarSucursal from './componentes/RegistrarSucursal'
 import Index from './componentes/Index';
-//import Modal from './componentes/Modal';
-//import TablaPrueba from './componentes/TablaPrueba'
+
 
 const estaAutenticado=()=>{
 
@@ -44,9 +43,9 @@ function App() {
      {/* llama directo la ruta */}
     <PublicRoute path='/' exact component={Login}/> 
     <MyRoute path='/index' exact component={Index}/>
-    <Route path='/registrarPersona' exact component={RegistrarPersona}/>
-    <Route path='/tablaPersona' exact component={TablaPersona}/>
-    <Route path='/registrarCiudad' exact component={RegistrarCiudad}/>
+    <Route path='/registrarProducto' exact component={RegistrarProducto}/>
+    <Route path='/tablaProducto' exact component={TablaProducto}/>
+    <Route path='/registrarSucursal' exact component={RegistrarSucursal}/>
     
    
 

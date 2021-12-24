@@ -1,7 +1,7 @@
 import React, { useState ,useEffect} from 'react'
 import { Button, Offcanvas, Nav, Navbar, Container, NavDropdown, Form, FormControl } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
-import { Redirect } from 'react-router';
+
 
 
 export default function Barra() {
@@ -29,39 +29,23 @@ export default function Barra() {
 
   }
 
-
-
-
-
-
-
   return (
     
-
-
       <Navbar bg="dark" variant="dark" expand={show}>
         <Container fluid>
 
      
-       
           <Navbar.Toggle aria-controls="offcanvasNavbar" />
-       
           
           <Navbar.Brand hidden={show} href="/" > <i className='fas fa-user'></i> Bienvenido: {sessionStorage.getItem('nombre')} </Navbar.Brand>
      
           <Navbar.Brand href="#"></Navbar.Brand>
-         
           <Navbar.Brand href="#"></Navbar.Brand>
           <Navbar.Brand href="#"></Navbar.Brand>
       
-          
-          <Link  hidden={opcionRegistro} style={{ color: '#FFF',textDecoration: 'none' }} to="/registrarCiudad" > <i className='fas fa-user-plus'></i> <Navbar.Brand > Registrarse </Navbar.Brand></Link>
+          <Link  hidden={opcionRegistro} style={{ color: '#FFF',textDecoration: 'none' }} to="/registrarSucursal" > <i className='fas fa-user-plus'></i> <Navbar.Brand > Registrarse </Navbar.Brand></Link>
           <Navbar.Brand  hidden={show} href="#home" onClick={() => salir()} to="/"> <i className='fas fa-user-times'></i >Cerrar sesión</Navbar.Brand>
         
-         
-          
-          
-         
          
           <Navbar.Offcanvas
             id="offcanvasNavbar"
@@ -78,16 +62,16 @@ export default function Barra() {
               
                   <NavDropdown  title="Registrar  " id="offcanvasNavbarDropdown"  >
                  
-                  <NavDropdown.Item ><i class="fas fa-user-plus"></i>  <Link className="navbar-brand" to="/RegistrarPersona">Persona</Link></NavDropdown.Item>
-                  {/* <NavDropdown.Item > <Link className="navbar-brand" to="/RegistrarCiudad">Ciudad</Link></NavDropdown.Item> */}
-                
+                  <NavDropdown.Item ><i class="fas fa-user-plus"></i>  <Link className="navbar-brand" to="/registrarProducto">Producto</Link></NavDropdown.Item>
+              
+    
 
                 </NavDropdown>
                 
                
                 <NavDropdown title="Reportes" id="offcanvasNavbarDropdown">
-                  <NavDropdown.Item > <i class="fas fa-book-open"></i><Link className="navbar-brand" to="/TablaPersona"> Ver personas</Link></NavDropdown.Item>
-                  {/* <NavDropdown.Item href="#action4">Ver Ciudades</NavDropdown.Item> */}
+                  <NavDropdown.Item > <i class="fas fa-book-open"></i><Link className="navbar-brand" to="/tablaProducto"> Ver productos</Link></NavDropdown.Item>
+            
                  
                 </NavDropdown>
                

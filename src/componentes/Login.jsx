@@ -1,4 +1,3 @@
-//import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -15,7 +14,6 @@ import Axios from 'axios'
 import React, { useState } from 'react'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Swal from 'sweetalert2'
-import { Redirect } from 'react-router';
 
 function Copyright(props) {
   return (
@@ -40,7 +38,7 @@ export default function SignInSide() {
     const login=async(e)=>{
         e.preventDefault();
         const usuario={correo,contrasena}
-        const respuesta= await Axios.post('/ciudad/login',usuario);
+        const respuesta= await Axios.post('/sucursal/login',usuario);
         console.log(respuesta);
         const mensaje=respuesta.data.mensaje
         if(mensaje!=='Bienvenido')
@@ -167,7 +165,7 @@ export default function SignInSide() {
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="/registrarCiudad" variant="body2">
+                  <Link href="/registrarSucursal" variant="body2">
                     {""}
                   </Link>
                 </Grid>

@@ -1,25 +1,24 @@
 import React from 'react'
-import { Button,Card } from 'react-bootstrap';
 
-
-export default function Index() {
+const derechos = () => {
     return (
-       
-        <div className="container">
-             <br />
-           <div class="card">
-            <div class="card-header bg-info">
-                Vacunados
-            </div>
-            <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                <p>Esta aplicacion contendra los registros de las personas que se han vacunado.</p>
-                <footer class="blockquote-footer">Vacunados <cite title="Source Title">Soft</cite></footer>
-                </blockquote>
-            </div>
-            </div>
-                    
+        <div className='container'>
+        <br />
+        <div class="card">
+        <div class="card-header bg-info">
+            Derchos de autor
+        </div>
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+            <p>Realizado por Álvaro Santacruz.</p>
+            <footer class="blockquote-footer"><iframe width="1280" height="720" src="https://www.youtube.com/embed/kCjkOgbY9CY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <cite title="Source Title">Visita mi canal</cite></footer>
+            </blockquote>
+        </div>
+        </div>
             
         </div>
     )
 }
+
+export default derechos
+

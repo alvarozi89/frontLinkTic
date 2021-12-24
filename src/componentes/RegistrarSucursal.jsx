@@ -12,45 +12,33 @@ export default function Registro() {
     const registro=async(e)=>{
         e.preventDefault();
         const usuario={nombre,correo,contrasena}
-        const respuesta= await Axios.post('/ciudad/crear',usuario);
+        const respuesta= await Axios.post('/sucursal/crear',usuario);
         console.log(respuesta);
         const mensaje=respuesta.data.mensaje
         if(mensaje!=='Bienvenido')
         {
             
-
-
             Swal.fire({
-              
             icon: 'error',
             title: mensaje,
             showConfirmButton: false,
             timer: 1500
               })
 
-
-            //   Swal.fire(
-            //     'Good job!',
-            //     'You clicked the button!',
-            //     'success'
-            //   )
-
         }
 
         else{
-
             const token= respuesta.data.token
             const nombre= respuesta.data.nombre
             const idusuario=respuesta.data.id
             sessionStorage.setItem('token',token)
             sessionStorage.setItem('nombre',nombre)
             sessionStorage.setItem('idusuario',idusuario)
-           // window.location.href='/index'
 
           Swal.fire({
               
                 icon: 'success',
-                title: "Ciudad creada correctamente",
+                title: "Sucursal creada correctamente",
                 showConfirmButton: false,
                  timer: 1500
                    })
@@ -74,12 +62,11 @@ export default function Registro() {
                     <div className ="container text-center fa-5x">
                         <i className="fas fa-user-plus"></i>
 
-                  
-
+            
                     </div>
 
                     <div className="card-header text-center">
-                      <h4>Registrar ciudad</h4>
+                      <h4>Registrar Sucursal</h4>
                     </div>
                     <div className="card-body">
                         <form onSubmit={registro} >
@@ -89,7 +76,6 @@ export default function Registro() {
                                 <input type="text" className='form-control' autoFocus  required onChange={(e)=>setNombre(e.target.value)}/>
 
                             </div>
-
                             
                             <div className='form-group'>
                                 <label>Correo</label>
